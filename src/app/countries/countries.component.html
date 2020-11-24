@@ -1,0 +1,14 @@
+<h2>Countries in the world ({{ continent }})</h2>
+
+<div class="row">
+    <div [routerLink]="['/country', country.name]" class="card m-3 country" style="width: 15rem;"
+        *ngFor="let country of countriesList">
+        <img src="{{ country.flag }}" class="card-img-top" alt="Flag of {{ country.name }}">
+        <h5 class="card-title p-2">{{ country.name }}</h5>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"><u>Capital</u>: {{ country.capital }}</li>
+            <li class="list-group-item"><u>Continent</u>: {{ country.region }}</li>
+            <li class="list-group-item"><u>Subregion</u>: {{ country.subregion }}</li>
+        </ul>
+    </div>
+</div>

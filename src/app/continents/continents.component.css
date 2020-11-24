@@ -1,0 +1,24 @@
+.card{
+    background-color: transparent;
+    border: none;
+}
+
+.filter-message{
+    position: relative;
+    bottom: -60px;
+    width: fit-content;
+}
+
+.filter{
+    cursor: pointer;
+    width: 100%;
+    object-fit: scale-down;
+    transition: 250ms ease-in;
+    border-radius: 30px;
+    height: 300px;
+}
+
+.filter:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+}

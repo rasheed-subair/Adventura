@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -124,5 +125,8 @@
       }
     }
   },
-  "defaultProject": "adventura"
+  "defaultProject": "adventura",
+  "cli": {
+    "analytics": "12a4a1a5-3d76-4ee7-bdda-3f71464d9cdc"
+  }
 }

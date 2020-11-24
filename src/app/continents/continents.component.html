@@ -1,0 +1,45 @@
+<div class="text-center mx-5">
+    <h4>Want to learn facts about the countries in the world?</h4>
+    <p>Look through our catalog or search for a specific country by Name, Code, Currency, etc. <br>
+    Find information such as land size, location, flag, date of independence and many more.
+    </p>
+</div>
+<br>
+<div class="mb-5 filter-message bg-white">
+    <h4 class=" ">Filter by continent: </h4>
+</div>
+<br>
+
+<div class="row">
+    <div class="col-sm-3 w-100">
+        <div class="card p-3">
+            <a [routerLink]="['/countries', 'Africa']">
+                <img src="assets/img/africa.png" class="card-img-top filter" alt="Map of Africa">
+            </a>
+          </div>
+    </div>
+
+    <div class="col-sm-3 w-100">
+        <div class="card bg-transparent p-3">
+            <a [routerLink]="['/countries', 'Europe']">
+                <img src="assets/img/europe.png" class="card-img-top filter" alt="Map of Europe">
+            </a>
+          </div>
+    </div>
+
+    <div class="col-sm-3 w-100">
+        <div class="card bg-transparent p-3">
+            <a [routerLink]="['/countries', 'Asia']">
+                <img src="assets/img/asia.png" class="card-img-top filter" alt="Map of Asia">
+            </a>
+          </div>
+    </div>
+
+    <div class="col-sm-3 w-100">
+        <div class="card bg-transparent p-3">
+                <a [routerLink]="['/countries', 'Americas']">
+                    <img src="assets/img/america.png" class="card-img-top filter" alt="Map of the Americas">
+                </a>
+          </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+
+.country-border {
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 30px;
+    margin: 0px auto;
+
+}
+
+.country-flag{
+    width: 80%;
+    height: auto;
+    min-width: 300px;
+    transition: 300ms ease-out;
+}
+
+.country-flag:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+}
+
+.wikipedia {
+    font-family: 'Crimson Text', serif;
+    font-size: 5rem;
+    color: rgb(56, 55, 55);
+    width: 5.5rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 300ms ease-out;
+}
+
+.wikipedia:hover {
+    color: black;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.35);
+    background-color: #fafafa;
+}

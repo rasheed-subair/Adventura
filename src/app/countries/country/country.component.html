@@ -1,0 +1,172 @@
+<div class="country-border">
+    <h1>{{ myCountry.name }} <span>({{ myCountry.cioc }})</span></h1>
+    <hr>
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{{ myCountry.flag }}" alt="" class="country-flag">
+        </div>
+        <div class="col-md-6">
+            <h3>
+                <a href="https://en.wikipedia.org/wiki/{{ myCountry.name }}" target="_blank" class="wikipedia">W</a>: Learn more about {{ myCountry.name }} and its {{ myCountry.population }} citizens.
+            </h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 mt-5">
+            <!--NAME-->
+            <h3><strong>Names</strong></h3>
+            <table class="table table-bordered table-hover">
+                <tbody>
+                    <tr>
+                        <td><strong>General</strong></td>
+                        <td colspan="2">{{ myCountry.name }}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Demonym</strong></td>
+                        <td colspan="2">{{ myCountry.demonym}}</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Translations</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Name Translation</strong></td>
+                        <td colspan="2">
+                            <strong>Native:</strong> {{ myCountry.nativeName}}
+                            <br>
+                            <strong>German:</strong> {{ myCountry.translations.de}}
+                            <br>
+                            <strong>French:</strong> {{ myCountry.translations.fr}}
+                            <br>
+                            <strong>Spanish:</strong> {{ myCountry.translations.es}}
+                            <br>
+                            <strong>Arabic:</strong> {{ myCountry.translations.fa}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Name Alternative Spelling</strong></td>
+                        <td colspan="2">
+                            <span *ngFor="let spelling of myCountry.altSpellings">{{ spelling }} <br></span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <!--LANGUAGE-->
+            <h3><strong>Language</strong></h3>
+            <table class="table table-bordered table-hover">
+                <tbody>
+                    <tr>
+                        <td><strong>Native Language (General)</strong></td>
+                        <td colspan="2">{{ myCountry.languages[0].name }}</td>
+                    </tr>
+                    <tr>
+                        <td>(Native Spelling)</td>
+                        <td colspan="2">{{ myCountry.languages[0].nativeName }}</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><strong>ISO 639</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>1-Letter</strong></td>
+                        <td colspan="2">
+                            {{ myCountry.languages[0].iso639_1 }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>2-Letters</strong></td>
+                        <td colspan="2">
+                            {{ myCountry.languages[0].iso639_2 }}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="col-md-6 mt-5">
+            <!--CODES-->
+            <h3><strong>Codes</strong></h3>
+            <table class="table table-bordered table-hover">
+                <tbody>
+                    <tr>
+                        <td><strong>ISO 3166-1 2-letter</strong></td>
+                        <td colspan="2">{{ myCountry.alpha2Code }}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ISO 3166-1 2-letter</strong></td>
+                        <td colspan="2">{{ myCountry.alpha3Code }}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ISO 3166-1 Numeric</strong></td>
+                        <td colspan="2">{{ myCountry.numericCode }}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Calling Code</strong></td>
+                        <td colspan="2">{{ myCountry.callingCodes }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <!--GEOGRAPHY-->
+            <h3><strong>Geography</strong></h3>
+            <table class="table table-bordered table-hover">
+                <tbody>
+                    <tr>
+                        <td><strong>Region</strong></td>
+                        <td colspan="2">{{ myCountry.region }}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sub-Region</strong></td>
+                        <td colspan="2">{{ myCountry.subregion }}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Capital</strong></td>
+                        <td colspan="2">{{ myCountry.capital }}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Latitude</strong></td>
+                        <td colspan="2">{{ myCountry.latlng[0] }}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Longitude</strong></td>
+                        <td colspan="2">{{ myCountry.latlng[1] }}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Area (m<sup>2</sup>)</strong></td>
+                        <td colspan="2">{{ myCountry.area }}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Shares Borders with</strong></td>
+                        <td colspan="2">
+                            <span *ngFor="let neighbor of myCountry.borders">{{ neighbor }}, </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <!--CURRENCY-->
+            <h3><strong>Currency</strong></h3>
+            <table class="table table-bordered table-hover">
+                <tbody>
+                    <tr>
+                        <td><strong>Code</strong></td>
+                        <td colspan="2">{{ myCountry.currencies[0].code }}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Numeric Code</strong></td>
+                        <td colspan="2">{{ myCountry.currencies[0].numericCode }}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Symbol</strong></td>
+                        <td colspan="2">{{ myCountry.currencies[0].symbol }}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Gini Index</strong></td>
+                        <td colspan="2">{{ myCountry.gini }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<br><br>
