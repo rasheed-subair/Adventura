@@ -11,6 +11,8 @@ export class CountriesComponent implements OnInit {
 
   countriesList: any;
   continent: string = '';
+  filterByCountry= '';
+  filterByContinent= '';
   constructor(private countryService: CountryService,
               private route: ActivatedRoute,
               private router: Router) { }

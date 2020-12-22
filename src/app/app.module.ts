@@ -11,6 +11,8 @@ import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FilterPipe } from './countries/filter.pipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,10 +22,12 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     CountryComponent,
     HeaderComponent,
     FooterComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     HttpClientModule,
     FontAwesomeModule

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { CountryService } from '../country.service';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-country',
@@ -10,7 +9,6 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 })
 export class CountryComponent implements OnInit {
 
-  faCoffee = faCoffee;
   country: any;
   myCountry: any = [];
   name: string= '';
