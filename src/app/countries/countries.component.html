@@ -1,9 +1,9 @@
 <h2>Countries in the world ({{ continent }})</h2>
 
 <div class="row">
-    <input type="text" class="form-control w-50" [(ngModel)]="filterByCountry" placeholder="Enter country e.g 'fiji'">
-    <input type="text" class="form-control w-50" [(ngModel)]="filterByContinent" placeholder="Enter continent e.g. 'americas">
-    <br/>
+    <input type="text" class="form-control w-50 col-xs-6 col-md-6" [(ngModel)]="filterByCountry" placeholder="Enter country e.g 'fiji'">
+    <input type="text" class="form-control w-50 col-xs-6 col-md-6" [(ngModel)]="filterByContinent" placeholder="Enter continent e.g. 'americas">
+    <hr> <hr>
     <div [routerLink]="['/country', country.name]" class="card m-3 country" style="width: 15rem;"
         *ngFor="let country of countriesList | filter:filterByCountry:'name' | filter:filterByContinent:'region'">
         <img src="{{ country.flag }}" class="card-img-top" alt="Flag of {{ country.name }}">
